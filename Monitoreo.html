@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>NUTRI BUNNY TREATMENTS</title>
+  <link rel="icon" type="image/png" href="logo_web.png" />
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #000000;
+      padding: 20px;
+    }
+    .sensorBox {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #ccc;
+    }
+    h1 { color: #ffffff; }
+    button {
+      padding: 15px;
+      width: 80%;
+      font-size: 18px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Monitoreo de 3 Sensores</h1>
+
+  <button onclick="connectBT()">Conectar Bluetooth</button>
+
+  <div class="sensorBox">
+    <h2>Sensor 1</h2>
+    <h1 id="s1">---</h1>
+  </div>
+
+  <div class="sensorBox">
+    <h2>Sensor 2</h2>
+    <h1 id="s2">---</h1>
+  </div>
+
+  <div class="sensorBox">
+    <h2>Sensor 3</h2>
+    <h1 id="s3">---</h1>
+  </div>
+
+  <button style="background:#ff5c5c;color:white;" onclick="disconnectBT()">Desconectar</button>
+
+  <script src="Sensores.js"></script>
+  <b><a href="Main-Control.html" target=><button>Regresar</button></a></b>
+
+</body>
+</html>
