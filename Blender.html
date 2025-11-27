@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>NUTRI BUNNY TREATMENTS</title>
+  <link rel="icon" type="image/png" href="logo_web.png" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial;
+    }
+    model-viewer {
+      width: 60vw;
+      height: 70vh;
+      border-radius: 20px;
+      background: rgb(0, 0, 0);
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+    <center>
+  <model-viewer 
+    src="modelo.glb"
+    alt="Modelo 3D de Blender"
+    auto-rotate
+    camera-controls
+    touch-action="pan-y"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+  ></model-viewer>
+ <br>
+ <b><a href="Main-Control.html" target=><button>Regresar</button></a></b></center>
+</body>
+</html>

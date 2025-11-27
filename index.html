@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>NUTRI BUNNY TREATMENTS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="logo_web.png" />
+  
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      flex-direction: column;
+      position: relative; 
+      min-height: 100vh; 
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .h1 {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+   <img src="logo.png" alt="logo" width="center" height="center">
+  <h3>Inicio de sesión</h3>
+  <div id="userError" class="error">Usuario incorrecto</div>
+  <p>
+    <b>Nombre de Usuario: <input type="text" id="usuario"></b>
+  </p>
+
+  <div id="passError" class="error">Contraseña incorrecta</div>
+  <p>
+    <b>Contraseña: <input type="password" id="password"></b>
+  </p>
+
+  <p>
+    <b><input type="submit" value="Iniciar Sesión" onclick="check()"></b>
+  </p>
+
+  <script>
+    const username = "admin";
+    const password = "1234";
+    function check() {
+      const user = document.getElementById("usuario").value;
+      const pass = document.getElementById("password").value;
+      document.getElementById("userError").style.display = "none";
+      document.getElementById("passError").style.display = "none";
+
+      let valido = true;
+      if (user !== username) {
+        document.getElementById("userError").style.display = "block";
+        valido = false;
+      }
+      if (pass !== password) {
+        document.getElementById("passError").style.display = "block";
+        valido = false;
+      }
+      if (valido) {
+        window.location.href = "Main-Control.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
